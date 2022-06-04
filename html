@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: url('https://content.skyscnr.com/m/305b2a9865c46ea5/original/GettyImages-480752670.jpg?resize=1800px:1800px&quality=100')center ;
+            height: 800px;
+            width: 900px;
+            
+        }
+        header{
+            display: flex;
+            justify-content: center;
+            margin:100px 0px 0px 400px;
+
+        }
+        h1{
+            font-size: 100px;
+        }
+        input{
+            text-align: center;
+            height: 80px;
+            color: rgb(172, 172, 172);
+            background:none;
+            border: none;
+            font-size: 50px;
+    
+        }
+        input:hover{
+            border: none;
+            
+        }
+
+        @media (max-width: 1000px){
+            header{
+                /* margin: 20px 40px 0px 0px; */
+                margin-right:30px ;
+            }
+            body{
+                height: 50%;
+                width: 60%;
+                background: url('https://content.skyscnr.com/m/305b2a9865c46ea5/original/GettyImages-480752670.jpg?resize=1800px:1800px&quality=100')center ;
+                
+            }
+            
+
+
+        }
+        
+        
+
+        
+    </style>
+    <script>
+        function relogio(){
+            var data = new Date();
+            segun = data.getSeconds();
+            minu = data.getMinutes();
+            hours = data.getHours();
+            var hora = hours + ":" + minu+":"+segun;
+            document.getElementById("rel").value=hora;
+        }
+        var tempo = setInterval(relogio,1000);
+
+        
+    </script>
+</head>
+<body>
+    <header>
+        <input type="text" id="rel">
+    </header>
+</body>
+</html>
